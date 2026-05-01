@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m uvicorn main:app --port 8000)",
+      "Bash(where python3:*)",
+      "Bash(where py:*)",
+      "Bash(ls /c/Python*)",
+      "Read(//c/Users/prave/AppData/Local/Programs/**)",
+      "Read(//c/Users/prave/miniconda3/**)",
+      "Read(//c/Users/prave/anaconda3/**)",
+      "Read(//c/Users/prave/**)",
+      "Bash(cmd //c \"where python\")",
+      "Bash(cmd //c \"where py\")",
+      "Bash(cmd //c \"py --version\")",
+      "Bash(python:*)",
+      "Bash(/c/Users/prave/AppData/Local/Programs/Python/Python313/python.exe:*)"
+    ]
+  }
+}

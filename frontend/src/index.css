@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Light mode ── */
+:root {
+  --bg:              #ffffff;
+  --bg-subtle:       #fafafa;
+  --surface:         #ffffff;
+  --surface-raised:  #f4f4f5;
+  --border:          #e4e4e7;
+  --border-strong:   #d4d4d8;
+
+  --text:            #09090b;
+  --text-sec:        #52525b;
+  --text-muted:      #a1a1aa;
+
+  --primary:         #6366f1;
+  --primary-hover:   #4f46e5;
+  --primary-subtle:  #eef2ff;
+  --primary-border:  #c7d2fe;
+  --primary-text:    #4338ca;
+
+  --violet:          #8b5cf6;
+  --emerald:         #10b981;
+
+  --success:         #10b981;
+  --success-subtle:  #f0fdf4;
+  --success-border:  #bbf7d0;
+  --success-text:    #166534;
+
+  --warning:         #f59e0b;
+  --warning-subtle:  #fffbeb;
+  --warning-border:  #fde68a;
+  --warning-text:    #92400e;
+
+  --danger:          #ef4444;
+  --danger-subtle:   #fef2f2;
+  --danger-border:   #fecaca;
+  --danger-text:     #b91c1c;
+
+  --tag-bg:          #f4f4f5;
+  --tag-text:        #3f3f46;
+  --tag-border:      #e4e4e7;
+
+  --shadow-xs:       0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm:       0 1px 4px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md:       0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-lg:       0 8px 32px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+
+  --nav-bg:          #ffffff;
+  --nav-border:      #e4e4e7;
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --bg:              #09090b;
+  --bg-subtle:       #111113;
+  --surface:         #18181b;
+  --surface-raised:  #27272a;
+  --border:          #3f3f46;
+  --border-strong:   #52525b;
+
+  --text:            #fafafa;
+  --text-sec:        #a1a1aa;
+  --text-muted:      #71717a;
+
+  --primary:         #818cf8;
+  --primary-hover:   #6366f1;
+  --primary-subtle:  rgba(99,102,241,0.12);
+  --primary-border:  rgba(99,102,241,0.3);
+  --primary-text:    #a5b4fc;
+
+  --violet:          #a78bfa;
+  --emerald:         #34d399;
+
+  --success:         #34d399;
+  --success-subtle:  rgba(52,211,153,0.08);
+  --success-border:  rgba(52,211,153,0.25);
+  --success-text:    #6ee7b7;
+
+  --warning:         #fbbf24;
+  --warning-subtle:  rgba(251,191,36,0.08);
+  --warning-border:  rgba(251,191,36,0.25);
+  --warning-text:    #fcd34d;
+
+  --danger:          #f87171;
+  --danger-subtle:   rgba(248,113,113,0.08);
+  --danger-border:   rgba(248,113,113,0.25);
+  --danger-text:     #fca5a5;
+
+  --tag-bg:          #27272a;
+  --tag-text:        #d4d4d8;
+  --tag-border:      #3f3f46;
+
+  --shadow-xs:       0 1px 2px rgba(0,0,0,0.4);
+  --shadow-sm:       0 1px 4px rgba(0,0,0,0.5);
+  --shadow-md:       0 4px 16px rgba(0,0,0,0.6);
+  --shadow-lg:       0 8px 32px rgba(0,0,0,0.7);
+
+  --nav-bg:          #09090b;
+  --nav-border:      #27272a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll; /* always show scrollbar — prevents layout shift on short pages */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+/* smooth theme transition for all elements */
+*, *::before, *::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* but not transforms or opacity (kills animations) */
+button, a { transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease !important; }
+
+a { text-decoration: none; color: inherit; }
+
+/* Hide scrollbars on results columns while keeping scroll functionality */
+.no-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}

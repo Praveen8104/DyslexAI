@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+opencv-python-headless
+numpy
+groq
+python-dotenv
+jiwer
+jellyfish
+soundfile
+onnxruntime
