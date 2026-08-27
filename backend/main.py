@@ -7,10 +7,14 @@ from routes.letters import router as letters_router
 
 app = FastAPI(title="DyslexiaDetect API", version="1.0.0")
 
-# ALLOWED_ORIGINS env var lets you add deployed frontend URLs without touching code.
-# e.g. ALLOWED_ORIGINS=https://dyslexai.vercel.app,https://dyslexai.netlify.app
+# The frontends this API answers. Origins are compared exactly, so each entry is
+# scheme + host with no trailing slash and no path.
+# ALLOWED_ORIGINS adds more at runtime without a code change — comma separated.
 _extra = [o.strip() for o in os.environ.get("ALLOWED_ORIGINS", "").split(",") if o.strip()]
-_origins = ["http://localhost:3000", "https://dyslex-ai-virid.vercel.app"] + _extra
+_origins = [
+    "http://localhost:3000",              # development
+    "https://dyslexai.praveenreddy.dev",  # production
+] + _extra
 
 app.add_middleware(
     CORSMiddleware,

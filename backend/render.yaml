@@ -9,4 +9,5 @@ services:
       - key: GROQ_API_KEY
         sync: false          # set manually in Render dashboard — never committed
       - key: ALLOWED_ORIGINS
-        sync: false          # set to your deployed frontend URL, e.g. https://dyslexai.vercel.app
+        sync: false          # optional — extra origins beyond the ones in main.py,
+                             # comma separated. Production is already in code.
