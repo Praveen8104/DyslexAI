@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>DyslexAI</title>
+  <rect width="32" height="32" rx="5" fill="#1B3A6B"/>
+  <rect x="8.6" y="4.6" width="3.2" height="22.8" rx="1.2" fill="#F3EFE6"/>
+  <circle cx="17.6" cy="20.2" r="5.6" fill="none" stroke="#F3EFE6" stroke-width="3.2"/>
+</svg>
